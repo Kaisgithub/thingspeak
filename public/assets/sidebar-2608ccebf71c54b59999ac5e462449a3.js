@@ -1,0 +1,1 @@
+$(window).on("page:load load",function(){$.fn.affix&&(setTimeout(function(){$("#bootstrap-sidebar").affix()},100),$(document.body).scrollspy({target:"#leftcol",offset:300}),$("#bootstrap-sidebar li a[href^='#']").on("click",function(o){o.preventDefault();var t=this.hash;$("html, body").animate({scrollTop:$(this.hash).offset().top-90},300,function(){window.location.hash=t})}))});

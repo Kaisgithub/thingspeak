@@ -1,0 +1,135 @@
+# Logfile created on 2015-11-19 13:34:28 +0800 by logger.rb/47272
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Starting the New Relic agent in "development" environment.
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] WARN : No configuration file found. Working directory = /home/tyrael/workspace-ruby/thingspeak
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] WARN : Looked in these locations (based on defaults): /home/tyrael/workspace-ruby/thingspeak/config/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/config/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/newrelic.yml, /home/tyrael/.newrelic/newrelic.yml, /home/tyrael/newrelic.yml
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Environment: development
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Dispatcher: mongrel
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Application: development
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Installing Rails 3+ middleware instrumentation
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Installing ActiveRecord 4 instrumentation
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Installing Dalli Memcache instrumentation
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Installing Resque instrumentation
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Installing Net instrumentation
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Installing deferred Rack instrumentation
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Installing Rack::Builder middleware instrumentation
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Installing Rails 4 Error instrumentation
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Installing Rails 4 Controller instrumentation
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Installing Rails 4 view instrumentation
+[11/19/15 13:34:28 +0800 tyrael-S550CM (9970)] INFO : Finished instrumentation
+[11/19/15 13:34:29 +0800 tyrael-S550CM (9970)] INFO : Doing deferred dependency-detection before Rack startup
+[11/19/15 13:34:39 +0800 tyrael-S550CM (9970)] ERROR : Invalid license key, please contact support@newrelic.com
+[11/19/15 13:34:39 +0800 tyrael-S550CM (9970)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[11/19/15 13:40:43 +0800 tyrael-S550CM (9970)] INFO : Starting Agent shutdown
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Starting the New Relic agent in "development" environment.
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] WARN : No configuration file found. Working directory = /home/tyrael/workspace-ruby/thingspeak
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] WARN : Looked in these locations (based on defaults): /home/tyrael/workspace-ruby/thingspeak/config/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/config/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/newrelic.yml, /home/tyrael/.newrelic/newrelic.yml, /home/tyrael/newrelic.yml
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Environment: development
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Dispatcher: mongrel
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Application: development
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Installing Rails 3+ middleware instrumentation
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Installing ActiveRecord 4 instrumentation
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Installing Dalli Memcache instrumentation
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Installing Resque instrumentation
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Installing Net instrumentation
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Installing deferred Rack instrumentation
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Installing Rack::Builder middleware instrumentation
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Installing Rails 4 Error instrumentation
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Installing Rails 4 Controller instrumentation
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Installing Rails 4 view instrumentation
+[11/19/15 13:43:12 +0800 tyrael-S550CM (10091)] INFO : Finished instrumentation
+[11/19/15 13:43:13 +0800 tyrael-S550CM (10091)] INFO : Doing deferred dependency-detection before Rack startup
+[11/19/15 13:43:36 +0800 tyrael-S550CM (10091)] ERROR : Invalid license key, please contact support@newrelic.com
+[11/19/15 13:43:36 +0800 tyrael-S550CM (10091)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[11/19/15 13:51:53 +0800 tyrael-S550CM (10091)] INFO : Starting Agent shutdown
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : Starting the New Relic agent in "development" environment.
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] WARN : No configuration file found. Working directory = /home/tyrael/workspace-ruby/thingspeak
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] WARN : Looked in these locations (based on defaults): /home/tyrael/workspace-ruby/thingspeak/config/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/config/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/newrelic.yml, /home/tyrael/.newrelic/newrelic.yml, /home/tyrael/newrelic.yml
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : Environment: development
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : No known dispatcher detected.
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : Application: development
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : Installing Rails 3+ middleware instrumentation
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : Installing ActiveRecord 4 instrumentation
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : Installing Dalli Memcache instrumentation
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : Installing Resque instrumentation
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : Installing Net instrumentation
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : Installing deferred Rack instrumentation
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : Installing Rack::Builder middleware instrumentation
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : Installing Rails 4 Error instrumentation
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : Installing Rails 4 Controller instrumentation
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : Installing Rails 4 view instrumentation
+[11/19/15 14:15:51 +0800 tyrael-S550CM (11056)] INFO : Finished instrumentation
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Starting the New Relic agent in "development" environment.
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] WARN : No configuration file found. Working directory = /home/tyrael/workspace-ruby/thingspeak
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] WARN : Looked in these locations (based on defaults): /home/tyrael/workspace-ruby/thingspeak/config/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/config/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/newrelic.yml, /home/tyrael/.newrelic/newrelic.yml, /home/tyrael/newrelic.yml
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Environment: development
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Dispatcher: mongrel
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Application: development
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Installing Rails 3+ middleware instrumentation
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Installing ActiveRecord 4 instrumentation
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Installing Dalli Memcache instrumentation
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Installing Resque instrumentation
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Installing Net instrumentation
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Installing deferred Rack instrumentation
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Installing Rack::Builder middleware instrumentation
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Installing Rails 4 Error instrumentation
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Installing Rails 4 Controller instrumentation
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Installing Rails 4 view instrumentation
+[11/19/15 16:03:30 +0800 tyrael-S550CM (14327)] INFO : Finished instrumentation
+[11/19/15 16:03:31 +0800 tyrael-S550CM (14327)] INFO : Doing deferred dependency-detection before Rack startup
+[11/19/15 16:04:06 +0800 tyrael-S550CM (14327)] ERROR : Invalid license key, please contact support@newrelic.com
+[11/19/15 16:04:06 +0800 tyrael-S550CM (14327)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[11/19/15 16:04:19 +0800 tyrael-S550CM (14327)] INFO : Starting Agent shutdown
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Starting the New Relic agent in "development" environment.
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] WARN : No configuration file found. Working directory = /home/tyrael/workspace-ruby/thingspeak
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] WARN : Looked in these locations (based on defaults): /home/tyrael/workspace-ruby/thingspeak/config/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/config/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/newrelic.yml, /home/tyrael/.newrelic/newrelic.yml, /home/tyrael/newrelic.yml
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Environment: development
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Dispatcher: mongrel
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Application: development
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Installing Rails 3+ middleware instrumentation
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Installing ActiveRecord 4 instrumentation
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Installing Dalli Memcache instrumentation
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Installing Resque instrumentation
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Installing Net instrumentation
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Installing deferred Rack instrumentation
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Installing Rack::Builder middleware instrumentation
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Installing Rails 4 Error instrumentation
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Installing Rails 4 Controller instrumentation
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Installing Rails 4 view instrumentation
+[11/19/15 16:04:24 +0800 tyrael-S550CM (14391)] INFO : Finished instrumentation
+[11/19/15 16:04:25 +0800 tyrael-S550CM (14391)] INFO : Doing deferred dependency-detection before Rack startup
+[11/19/15 16:04:33 +0800 tyrael-S550CM (14391)] ERROR : Invalid license key, please contact support@newrelic.com
+[11/19/15 16:04:33 +0800 tyrael-S550CM (14391)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[11/19/15 16:13:15 +0800 tyrael-S550CM (14391)] INFO : Starting Agent shutdown
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Starting the New Relic agent in "development" environment.
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : To prevent agent startup add a NEWRELIC_AGENT_ENABLED=false environment variable or modify the "development" section of your newrelic.yml.
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] WARN : No configuration file found. Working directory = /home/tyrael/workspace-ruby/thingspeak
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] WARN : Looked in these locations (based on defaults): /home/tyrael/workspace-ruby/thingspeak/config/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/config/newrelic.yml, /home/tyrael/workspace-ruby/thingspeak/newrelic.yml, /home/tyrael/.newrelic/newrelic.yml, /home/tyrael/newrelic.yml
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Environment: development
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Dispatcher: mongrel
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Application: development
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] WARN : No license key found. This often means your newrelic.yml file was not found, or it lacks a section for the running environment, 'development'.
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Installing Rails 3+ middleware instrumentation
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Installing ActiveRecord 4 instrumentation
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Installing Dalli Memcache instrumentation
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Installing Resque instrumentation
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Installing Net instrumentation
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Installing deferred Rack instrumentation
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Installing Rack::Builder middleware instrumentation
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Installing Rails 4 Error instrumentation
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Installing Rails 4 Controller instrumentation
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Installing Rails 4 view instrumentation
+[11/19/15 16:13:19 +0800 tyrael-S550CM (14710)] INFO : Finished instrumentation
+[11/19/15 16:13:20 +0800 tyrael-S550CM (14710)] INFO : Doing deferred dependency-detection before Rack startup
+[11/19/15 16:13:30 +0800 tyrael-S550CM (14710)] ERROR : Invalid license key, please contact support@newrelic.com
+[11/19/15 16:13:30 +0800 tyrael-S550CM (14710)] ERROR : Visit NewRelic.com to obtain a valid license key, or to upgrade your account.
+[11/20/15 17:08:56 +0800 tyrael-S550CM (14710)] INFO : Starting Agent shutdown

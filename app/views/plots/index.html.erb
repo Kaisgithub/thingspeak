@@ -1,0 +1,99 @@
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $("button").click(function(){
+
+      var str1 = 'http://192.168.4.182:3000/channels/' + $("#x1").val() +'/fields/' + $("#x2").val() + '/last?key=' + $("#x3").val();
+      var str2 = 'http://192.168.4.182:3000/channels/' + $("#y1").val() +'/fields/' + $("#y2").val() + '/last?key=' + $("#y3").val();
+      var str3 = 'http://192.168.4.182:3000/update?key=' + $("#z2").val() +'&field' + $("#z3").val() + '=';
+      $.getJSON(str1, function(x){
+        $("p").append('x=' + x + ' ');
+
+        $.getJSON(str2,function(y){
+          $("p").append('y=' + y + ' ');
+          var formuls = $("#z1").val();
+          var z1 = eval(formuls);
+          $("p").append('z=' + z1 + ' ');
+          var z = str3 + z1;
+          $.get(z,
+              function(ztotal,status){
+                $("p").append("ztotal:" + ztotal + "\n status:" + status + "   ");
+              });
+        });
+      });
+    });
+  });
+</script>
+
+
+<div>
+x=channel
+<input type="text" id="x1">
+field
+<input type="text" id="x2"> channel key <input type="text" id="x3">
+  <br/>
+y=channel
+<input type="text" id="y1">
+field
+<input type="text" id="y2"> channel key <input type="text" id="y3">
+<br/>
+z=
+<input type="text" id="z1">
+channel key <input type="text" id="z2"> filed <input type="text" id="z3">
+<br/>
+<button>start</button>
+<p></p>
+  <div class="col-pad" data-no-turbolink>
+
+    <% if @channels.length > 0 %>
+
+        <table class="table table-striped table-bordered tablesorter" data-no-turbolink>
+          <thead>
+          <tr>
+            <th><%= t(:channel_id) %> <i class="fa fa-unsorted"></i></th>
+            <th><%= t(:channel_name) %> <i class="fa fa-unsorted"></i></th>
+            <th>Fields<i class="fa fa-unsorted"></i></th>
+            <th>Channel_key<i class="fa fa-unsorted"></i></th>
+
+          </tr>
+          </thead>
+          <tbody>
+          <% @channels.where(:social => false).each do |channel| %>
+              <tr>
+                <td><%= channel.id %></td>
+
+                <td>
+                  <h4 style="margin-top: 0;">
+                    <a href="/channels/<%= channel.id %>">
+                      <i class="fa fa-<%= 'un' if channel.public_flag == true %>lock fa-fw"></i>
+                      <%= channel.name %>
+                    </a>
+                  </h4>
+                </td>
+
+                <td><%=  %></td>
+
+                <td><%= channel.api_keys.write_keys.first %></td>
+
+
+              </tr>
+          <% end %>
+          </tbody>
+        </table>
+    <% end %>
+
+    <% if current_admin_user.present? %>
+        <br><br><br>
+        <% @channels.each do |c| %>
+            <% if c.social %>
+                <%= t(:social_channel) %>: <%= link_to c.name, (Rails.env == 'production') ? "http://www.socialsensornetwork.com/#{c.slug}" : "/s/#{c.slug}" %>
+                <br>
+            <% end %>
+        <% end %>
+        <br>
+        <%= link_to t(:social_channel_create), :controller => 'channels', :action => 'social_new' %>
+    <% end %>
+
+  </div>
+</div>
+

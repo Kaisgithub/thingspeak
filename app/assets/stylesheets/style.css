@@ -1,0 +1,38 @@
+/* Empty. Add your own CSS if you like */
+html {
+    height: 100%
+}
+
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px
+}
+
+body,html,#container {
+    height: 611px;
+    width: 1290px;
+    margin: 0px
+}
+/* 定义自定义点样式 */
+
+div.marker {
+    height: 40px;
+    background: url(http://cache.amap.com/lbs/static/marker.png) left top no-repeat;
+}
+
+div.marker div {
+    height: 28px;
+    line-height: 28px;
+    margin: 0 10px;
+    color: #FFF;
+    background: url(http://webapi.amap.com/images/marker_bg_170x28.gif) right top no-repeat;
+    padding-right: 10px;
+}
+.fac_img {
+    border: 0;
+    vertical-align:middle;
+    height:80%;
+    width:90%;
+    margin-top:20%
+}

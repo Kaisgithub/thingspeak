@@ -1,0 +1,1 @@
+$(document).on("page:load ready",function(){$(".response").click(function(){var e=$(this).data("response_type");$(".response").removeClass("active"),$(".response-"+e).addClass("active"),$(".format").hide(),$(".format-"+e).show()})});

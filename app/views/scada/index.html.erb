@@ -1,0 +1,51 @@
+
+<style type="text/css">
+  body,html,#container{
+    height: 611px;
+    margin: 0px
+  }
+</style>
+<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=528e6fa0a7888d1be22e77a50d2dfe79"></script>
+
+<div id="container" tabindex="0"></div>
+
+<script type="text/javascript">
+  var positions = "{\"count\":3,\"info\":\"OK\",\"status\":1,\"datas\":[{\"_id\":\"33\",\"_location\":\"116.3033897,39.9557559\",\"_name\":\"北京理工大学\",\"_address\":\"#/tab/home\",\"recommended\":\"五颗星\",\"burea\":null,\"telephone\":null,\"_locstatus\":1,\"_createtime\":\"2015-07-20 15:57:35\",\"_updatetime\":\"2015-07-20 15:57:35\",\"_image\":[]},{\"_id\":\"32\",\"_location\":\"116.3472265,39.980086\",\"_name\":\"北京航空航天大学\",\"_address\":\"#/tab/home\",\"recommended\":\"四颗星\",\"burea\":null,\"telephone\":null,\"_locstatus\":1,\"_createtime\":\"2015-07-20 15:57:35\",\"_updatetime\":\"2015-07-20 15:57:35\",\"_image\":[]},{\"_id\":\"31\",\"_location\":\"116.3006978,39.9713894\",\"_name\":\"中国人民大学\",\"_address\":\"#/tab/home\",\"recommended\":\"五颗星\",\"burea\":null,\"telephone\":null,\"_locstatus\":1,\"_createtime\":\"2015-07-20 15:57:35\",\"_updatetime\":\"2015-07-20 15:57:35\",\"_image\":[]}]}";
+  var data = JSON.parse(positions);
+  if (data['count'] <= 0) {
+    window.alert('目前该业务没有地理信息数据');
+  }
+  var centerLon = parseFloat(data['datas'][0]._location.split(",")[0]);
+  var centerLat = parseFloat(data['datas'][0]._location.split(",")[1]);
+  var position = new AMap.LngLat(centerLon, centerLat);
+
+  //创建地图
+  var mapObj = new AMap.Map('container',{
+    center: position,
+    resizeEnable: true,
+    zoom: 12,
+  });
+  //获取每个点位置
+  $(data['datas']).each(function() {
+    var lon = parseFloat(this._location.split(",")[0]);
+    var lat = parseFloat(this._location.split(",")[1]);
+
+    //创建标记
+    var marker = new AMap.Marker({
+      map: mapObj,
+      position: [lon, lat],
+    });
+
+    var info = [];
+    info.push("<b>" + this._name + "</b>");
+    info.push("<a href=" + 'http://192.168.4.182:3000/test' + ">" + this._address + "</a>");
+    var infoWindow = new AMap.InfoWindow({
+      offset: new AMap.Pixel(0, -23),
+      content: info.join("<br/>")
+    });
+    marker.on("click", function(e) {
+      infoWindow.open(mapObj, e.target.getPosition());
+    });
+
+  });
+</script>

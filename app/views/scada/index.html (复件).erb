@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/ionic/1.1.1/css/ionic.css" />
+
+    <%= stylesheet_link_tag 'style' %>    <!-- Amap按钮 -->
+
+    <script type="text/javascript" src="//cdn.bootcss.com/jquery/1.11.3/jquery.js"></script>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=0e2b1f5ecd8fd0adb4ec76f666029ea1">
+    </script>
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+    <!-- ionic/angularjs js -->
+
+  <script type="text/javascript" src="//cdn.bootcss.com/ionic/1.1.1/js/ionic.bundle.js"></script>
+    <!-- cordova script (this will be a 404 during development) -->
+    <!--script src="cordova.js"></script-->
+    <!-- your app's js -->
+  <script type="text/javascript">
+      // Ionic Starter App
+
+      // angular.module is a global place for creating, registering and retrieving Angular modules
+      // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
+      // the 2nd parameter is an array of 'requires'
+      angular.module('starter', ['ionic'])
+              .run(function($ionicPlatform) {
+                  $ionicPlatform.ready(function() {
+                      // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
+                      // for form inputs)
+                      if (window.cordova && window.cordova.plugins.Keyboard) {
+                          cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
+                      }
+                      if (window.StatusBar) {
+                          StatusBar.styleDefault();
+                      }
+                  });
+              })
+
+
+              .config(function($stateProvider, $urlRouterProvider) {
+
+                  $stateProvider
+                          .state('map', {
+                              url: '/map',
+                              templateUrl: 'templates/map.html',
+                              controller: 'MapCtrl'
+                          })
+                          .state('home',{
+                              url: '/home',
+                              templateUrl: 'templates/home.html'
+                          });
+
+
+                  $urlRouterProvider.otherwise('/map');
+
+              })
+
+              .controller('MapCtrl', function($scope, $state) {});
+
+
+      function initialize() {
+
+          //$("#bizselector option[value='" + table_name +"']").attr("selected", true);
+          var positions = "{\"count\":3,\"info\":\"OK\",\"status\":1,\"datas\":[{\"_id\":\"33\",\"_location\":\"116.3033897,39.9557559\",\"_name\":\"北京理工大学\",\"_address\":\"#/home\",\"recommended\":\"五颗星\",\"burea\":null,\"telephone\":null,\"_locstatus\":1,\"_createtime\":\"2015-07-20 15:57:35\",\"_updatetime\":\"2015-07-20 15:57:35\",\"_image\":[]},{\"_id\":\"32\",\"_location\":\"116.3472265,39.980086\",\"_name\":\"北京航空航天大学\",\"_address\":\"#/home\",\"recommended\":\"四颗星\",\"burea\":null,\"telephone\":null,\"_locstatus\":1,\"_createtime\":\"2015-07-20 15:57:35\",\"_updatetime\":\"2015-07-20 15:57:35\",\"_image\":[]},{\"_id\":\"31\",\"_location\":\"116.3006978,39.9713894\",\"_name\":\"中国人民大学\",\"_address\":\"#/home\",\"recommended\":\"五颗星\",\"burea\":null,\"telephone\":null,\"_locstatus\":1,\"_createtime\":\"2015-07-20 15:57:35\",\"_updatetime\":\"2015-07-20 15:57:35\",\"_image\":[]}]}";
+
+          var data = JSON.parse(positions);
+          if (data['count'] <= 0) {
+              window.alert('目前该业务没有地理信息数据');
+              return;
+          }
+          var centerLon = parseFloat(data['datas'][0]._location.split(",")[0]);//根据data获得经度
+          var centerLat = parseFloat(data['datas'][0]._location.split(",")[1]);//根据data获得纬度
+          var zoomLevel = 14;
+
+          var position = new AMap.LngLat(centerLon, centerLat);
+
+          var mapObj = new AMap.Map("container", {
+              view: new AMap.View2D({ //创建地图二维视口
+                  center: position, //创建中心点坐标
+                  zoom: zoomLevel, //设置地图缩放级别
+                  rotation: 0 //设置地图旋转角度
+              }),
+              lang: "zh_cn" //设置地图语言类型，默认：中文简体
+          }); //创建地图实例
+          mapObj.plugin(["AMap.ToolBar", "AMap.OverView", "AMap.Scale"], function() {
+              //加载工具条
+              tool = new AMap.ToolBar({
+                  direction: false, //隐藏方向导航
+                  ruler: false, //隐藏视野级别控制尺
+                  autoPosition: false //禁止自动定位
+              });
+              mapObj.addControl(tool);
+              //加载鹰眼左上角按钮
+              view = new AMap.OverView();
+              mapObj.addControl(view);
+              //加载比例尺右下角按钮
+              scale = new AMap.Scale();
+
+              mapObj.addControl(scale);
+
+              $(data['datas']).each(function() {
+                  var lon = parseFloat(this._location.split(",")[0]);
+                  var lat = parseFloat(this._location.split(",")[1]);
+                  var addr = this._address;
+
+                  //自定义覆盖物dom元素
+                  var m = document.createElement("div");
+                  m.className = "marker";
+                  var n = document.createElement("div");
+                  n.innerHTML = "Amap";
+                  m.appendChild(n);
+
+                  var marker = new AMap.Marker({ //创建自定义点标注
+                      map: mapObj,
+                      position: new AMap.LngLat(lon, lat),
+                      offset: new AMap.Pixel(-10, -34),
+                      content: m
+                  });
+
+                  var info = [];
+                  info.push("<b>" + this._name + "</b>");
+                  info.push("<a href='" + this._address + "'>" + this._address + "</a>");
+                  var infoWindow = new AMap.InfoWindow({
+                      offset: new AMap.Pixel(0, -23),
+                      content: info.join("<br />")
+                  });
+                  AMap.event.addListener(marker, "click", function(e) {
+                      //infoWindow.open(mapObj, marker.getPosition());
+                      //alert(addr);
+                      //parent.iframe2.location.href=addr;
+                      //alert(top.location.href);
+                      window.location = addr;
+
+                  });
+              });
+          });
+      }
+
+
+  </script>
+
+
+</head>
+
+<body onload="initialize()" ng-app="starter">
+    <ion-nav-view></ion-nav-view>
+
+    <!-- 地图页面-->
+    <script id="templates/map.html" type="text/ng-template">
+        <div id="container"></div>
+    </script>
+
+    <script id="templates/home.html" type="text/ng-template">
+      <div style="text-align:center;">
+
+        <iframe src="http://192.168.4.250:9243" width="100%" height="100%"></iframe>
+
+      </div>
+
+    </script>
+
+</body>
+
+
+</html>

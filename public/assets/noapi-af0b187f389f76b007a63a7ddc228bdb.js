@@ -1,0 +1,1 @@
+var wloc=window.location.toString();-1!==wloc.indexOf("api")&&wloc.indexOf("api")<10&&-1===wloc.indexOf("charts")&&-1===wloc.indexOf("plugins")&&(window.location=wloc.replace("api","www"));

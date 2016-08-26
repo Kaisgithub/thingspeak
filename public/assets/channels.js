@@ -1,0 +1,1 @@
+$(document).on("page:load ready",function(){$("div.progressbar").each(function(){var r=this;$(r).progressbar({value:parseInt($(r).attr("rel"))})})});

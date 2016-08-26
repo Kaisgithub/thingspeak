@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="Rails thingspeak: development" uuid="8734747d-e027-4748-b8f5-2bd9e48b7cb8">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source name="Rails thingspeak: production" uuid="6fe5069b-f008-47e4-9c30-83a6d0d49d25">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
