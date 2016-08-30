@@ -52,7 +52,7 @@
       var last_date; // variable for the last date added to the chart
       window.console && console.log('Testing console');
       //make series numbers for each field
-      var seriesCounter=0
+      var seriesCounter=0;
       for (var channelIndex=0; channelIndex<channelKeys.length; channelIndex++)  // iterate through each channel
       {
         for (var fieldIndex=0; fieldIndex<channelKeys[channelIndex].fieldList.length; fieldIndex++)  // iterate through each channel
@@ -88,7 +88,7 @@
                 fieldList[fieldIndex].data =[];
                 for (var h=0; h<data.feeds.length; h++)  // iterate through each feed (data point)
                 {
-                  var p = []//new Highcharts.Point();
+                  var p = [];//new Highcharts.Point();
                   var fieldStr = "data.feeds["+h+"].field"+fieldList[fieldIndex].field;
                   var v = eval(fieldStr);
                   p[0] = getChartDate(data.feeds[h].created_at);
@@ -141,7 +141,7 @@
                               var chartSeriesIndex=channelKeys[channelIndex].fieldList[fieldIndex].series;
                               if (data && eval(fieldStr))
                               {
-                                var p = []//new Highcharts.Point();
+                                var p = [];//new Highcharts.Point()
                                 var v = eval(fieldStr);
                                 p[0] = getChartDate(data.created_at);
                                 p[1] = parseFloat(v);
@@ -344,7 +344,7 @@
 
     // load next 8000 points from a ThingSpeak channel and addPoints to a series
     function loadChannelHistory(sentChannelIndex,channelNumber,key,sentFieldList,sentNumLoads,maxLoads) {
-      var numLoads=sentNumLoads
+      var numLoads=sentNumLoads;
       var fieldList= sentFieldList;
       var channelIndex = sentChannelIndex;
       var first_Date = new Date();
@@ -373,7 +373,7 @@
           //fieldList[fieldIndex].data =[];
           for (var h=0; h<data.feeds.length; h++)  // iterate through each feed (data point)
           {
-            var p = []//new Highcharts.Point();
+            var p = [];//new Highcharts.Point()
             var fieldStr = "data.feeds["+h+"].field"+fieldList[fieldIndex].field;
             var v = eval(fieldStr);
             p[0] = getChartDate(data.feeds[h].created_at);
@@ -388,7 +388,7 @@
           //window.console && console.log('data added to series:',fieldList[fieldIndex].series,fieldList[fieldIndex].data);
         }
         channelKeys[channelIndex].fieldList=fieldList;
-        dynamicChart.redraw()
+        dynamicChart.redraw();
         window.console && console.log('channel index:',channelIndex);
         numLoads++;
         if (numLoads<maxLoads) {loadChannelHistory(channelIndex,channelNumber,key,fieldList,numLoads,maxLoads);}
